@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+
+body{
+    height: 100vh;
+    background-image: url('fundo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+nav.menu-lateral{
+    width: 80px;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 #FF0077;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+
+nav.menu-lateral.expandir{
+    width: 320px;
+}
+
+.btn-expandir{
+    width: 100%;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-expandir > i{
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+ul{
+    height: 100%;
+    list-style-type: none;
+}
+
+ul li.item-menu{
+    transition: .2s;
+}
+
+ul li.ativo{
+    background-color: #FF0077;
+}
+
+ul li.item-menu:hover{
+    background: #FF0077;
+}
+
+ul li.item-menu a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+
+ul li.item-menu a .txt-link{
+    margin-left: 70px;
+    transition: .5s;
+    opacity: 0;
+}
+
+nav.menu-lateral.expandir .txt-link{
+    margin-left: 40px;
+    opacity: 1;
+}
+
+ul li.item-menu a .icon > i{
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.mangas {
+    padding: 40px 110px 0px 150px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas para telas grandes */
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.manga {
+    width: 300px;
+    height: 450px;
+    border-radius: 5px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Degradê suave */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Sombra para o efeito de flutuação */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.manga:hover {
+    transform: translateY(-20px); /* Levanta a div ao passar o mouse */
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.6);
+    
+}
+
+.title_manga{
+    font-size: 17px;
+    border-radius: 8px;
+    padding: 5px 15px;
+    color: white;
+}
+
+.manga-container {
+    position: relative; /* Para que o título seja posicionado em relação a este contêiner */
+    display: inline-block; /* Para que a imagem e o título fiquem juntos */
+    text-align: center; /* Centraliza o título */
+}
+
+.title_manga {
+    position: absolute;
+    bottom: 0; /* Posiciona o texto na parte inferior da imagem */
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para legibilidade */
+    color: white; /* Cor do texto branco */
+    font-size: 16px;
+    border-bottom-left-radius: 5px; /* Arredonda os cantos inferiores, combinando com a imagem */
+    border-bottom-right-radius: 5px;
+    box-sizing: border-box; /* Inclui o padding dentro da largura da caixa */
+    text-align: center; /* Centraliza o texto */
+    z-index: 1; /* Garante que o texto apareça sobre a imagem */
+}
+
+nav.menu-lateral {
+    z-index: 1; /* Garante que o menu fique acima dos outros elementos */
+}
+
+.mangas {
+    z-index: 10; /* Coloca as mangas em uma camada inferior ao menu */
+}
+
+
+/* Para telas de tablet (largura máxima de 1024px) */
+@media (max-width: 1280px) {
+    .mangas {
+        grid-template-columns: repeat(3, 1fr); /* 2 colunas em tablet */
+    }
+}
+
+/* Para telas de celular (largura máxima de 768px) */
+@media (max-width: 1157px) {
+    .mangas {
+        grid-template-columns: repeat(3, 1fr); /* 1 coluna em celular */
+        
+    }
+    .manga {
+        width: 250px;
+         height: 400px;
+    }
+}
+
+@media (max-width: 982px) {
+    .mangas {
+        grid-template-columns: repeat(2, 1fr); /* 1 coluna em celular */
+        
+    }
+    .manga {
+        width: 250px;
+         height: 400px;
+    }
+
+
+}
+
+@media (max-width: 704px) {
+    .mangas {
+        grid-template-columns: repeat(1, 1fr); /* 1 coluna em celular */
+        
+    }
+    .manga {
+        width: 250px;
+         height: 400px;
+         margin-left: 24px;
+    }
+
+
+}

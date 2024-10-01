@@ -19,3 +19,30 @@ var menuSide = document.querySelector('.menu-lateral')
 btnExp.addEventListener('click', function(){
     menuSide.classList.toggle('expandir')
 })
+
+// página manhwas
+
+function mangas(){
+    window.location.href = "../index.html"
+}
+
+function manhwas(){
+    window.location.href = "../paginas/manhwas.html"
+}
+manhwas18
+
+function manhwas18(){
+    window.location.href = "../paginas/manhwa18.html"
+}
+
+function hentai(){
+    window.location.href = "../paginas/hentai.html"
+}
+
+function favoritos(){
+    window.location.href = "../paginas/favoritos.html"
+}
+
+function lidos(){
+    window.location.href = "../paginas/lidos.html"
+}

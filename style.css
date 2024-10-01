@@ -198,5 +198,22 @@ nav.menu-lateral {
          margin-left: 24px;
     }
 
+    .title_manga {
+        position: absolute;
+        bottom: 0; /* Posiciona o texto na parte inferior da imagem */
+        left: 0;
+        margin-left: 24px;
+        width: 250px;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para legibilidade */
+        color: white; /* Cor do texto branco */
+        font-size: 16px;
+        border-bottom-left-radius: 5px; /* Arredonda os cantos inferiores, combinando com a imagem */
+        border-bottom-right-radius: 5px;
+        box-sizing: border-box; /* Inclui o padding dentro da largura da caixa */
+        text-align: center; /* Centraliza o texto */
+        z-index: 1; /* Garante que o texto apareça sobre a imagem */
+    }
+
 
 }

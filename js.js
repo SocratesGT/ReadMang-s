@@ -29,18 +29,18 @@ function mangas(){
 function manhwas(){
     window.location.href = "../paginas/manhwas.html"
 }
-manhwas18
+
 
 function manhwas18(){
     window.location.href = "../paginas/manhwa18.html"
 }
 
-function hentai(){
+function Favoritos(){
     window.location.href = "../paginas/hentai.html"
 }
 
-function favoritos(){
-    window.location.href = "../paginas/favoritos.html"
+function New(){
+    window.location.href = "../paginas/NewChapters.html"
 }
 
 function lidos(){
